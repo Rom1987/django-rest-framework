@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -136,9 +136,6 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'django_rest_framework/static'),
-]
 
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
