@@ -135,7 +135,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [STATIC_DIR]
+# STATICFILES_DIRS = [STATIC_DIR]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'mysite/static'),
+]
 
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
