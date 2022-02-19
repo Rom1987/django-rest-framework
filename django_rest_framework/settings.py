@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -292,5 +292,6 @@ AUTHENTICATION_BACKENDS = (
 # пишем каким доменам хотим давать доступ к backend
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
-    "http://127.0.0.1:8000"
+    "http://127.0.0.1:8000",
+    "http://localhost:63342"
 ]
