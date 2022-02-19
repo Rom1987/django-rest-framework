@@ -28,6 +28,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# пишем каким доменам хотим давать доступ к backend
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:8080",
+    "http://127.0.0.1:8000",
+    "http://localhost:63342",
+    'http://127.0.0.1:63342'
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -289,11 +297,4 @@ AUTHENTICATION_BACKENDS = (
 
 )
 
-# пишем каким доменам хотим давать доступ к backend
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:8080",
-    "http://127.0.0.1:8000",
-    "http://localhost:63342",
-    'http://127.0.0.1:63342'
-]
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
