@@ -289,6 +289,7 @@ AUTHENTICATION_BACKENDS = (
 
 )
 
+CORS_ORIGIN_ALLOW_ALL = False
 # пишем каким доменам хотим давать доступ к backend
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
