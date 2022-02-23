@@ -13,7 +13,7 @@ import os
 from datetime import timedelta
 from pathlib import Path
 import dj_database_url
-import django_heroku
+# import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -300,7 +300,7 @@ AUTHENTICATION_BACKENDS = (
 #     'https://django--rest--framework.herokuapp.com'
 # ]
 CORS_ALLOW_ALL_ORIGINS = True  # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
-CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_CREDENTIALS = True
 # CORS_ALLOWED_ORIGINS = [
 #     'http://localhost:5500',
 #     "http://127.0.0.1:5500",
@@ -322,4 +322,4 @@ CORS_ALLOW_CREDENTIALS = True
 #     'x-requested-with',
 #     'Access-Control-Allow-Origin',
 # ]
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
