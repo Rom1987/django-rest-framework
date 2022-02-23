@@ -28,7 +28,10 @@ SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "django--rest--framework.herokuapp.com"
+]
 
 # Application definition
 
@@ -290,14 +293,14 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 
 )
-CORS_ALLOW_ALL_ORIGINS = True
+
 # пишем каким доменам хотим давать доступ к backend
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:5500",
-#     "http://127.0.0.1:5500",
-#     "http://localhost:8080",
-#     "http://127.0.0.1:8000",
-#     "http://localhost:63342",
-#     'http://127.0.0.1:63342',
-#     'https://django--rest--framework.herokuapp.com',
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
+    "http://localhost:8080",
+    "http://127.0.0.1:8000",
+    "http://localhost:63342",
+    'http://127.0.0.1:63342',
+    'https://django--rest--framework.herokuapp.com',
+]
