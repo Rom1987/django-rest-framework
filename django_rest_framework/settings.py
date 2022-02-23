@@ -13,6 +13,7 @@ import os
 from datetime import timedelta
 from pathlib import Path
 import dj_database_url
+
 # import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -290,7 +291,7 @@ AUTHENTICATION_BACKENDS = (
 
 )
 # пишем каким доменам хотим давать доступ к backend
-CORS_ALLOWED_ORIGINS = [
+CORS_ORIGIN_WHITELIST = [
     "http://localhost:5500",
     "http://127.0.0.1:5500",
     "http://localhost:8080",
