@@ -292,11 +292,11 @@ AUTHENTICATION_BACKENDS = (
 
 )
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ALLOW_HEADERS = (
+CORS_ALLOW_HEADERS = [
     'Access-Control-Allow-Headers',
     'Access-Control-Allow-Credentials',
     'Access-Control-Allow-Origin',
-)
+]
 # пишем каким доменам хотим давать доступ к backend
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5500",
