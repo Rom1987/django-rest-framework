@@ -13,7 +13,6 @@ import os
 from datetime import timedelta
 from pathlib import Path
 import dj_database_url
-import django_heroku
 
 # import django_heroku
 
@@ -29,9 +28,7 @@ SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "django--rest--framework.herokuapp.com"
-]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -294,16 +291,14 @@ AUTHENTICATION_BACKENDS = (
 
 )
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 # пишем каким доменам хотим давать доступ к backend
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:5500",
-#     "http://127.0.0.1:5500",
-#     "http://localhost:8080",
-#     "http://127.0.0.1:8000",
-#     "http://localhost:63342",
-#     'http://127.0.0.1:63342',
-#     'https://django--rest--framework.herokuapp.com',
-# ]
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
+    "http://localhost:8080",
+    "http://127.0.0.1:8000",
+    "http://localhost:63342",
+    'http://127.0.0.1:63342',
+    'https://django--rest--framework.herokuapp.com',
+]
