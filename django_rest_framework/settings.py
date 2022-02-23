@@ -13,6 +13,7 @@ import os
 from datetime import timedelta
 from pathlib import Path
 import dj_database_url
+import django_heroku
 
 # import django_heroku
 
@@ -304,3 +305,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 #     'http://127.0.0.1:63342',
 #     'https://django--rest--framework.herokuapp.com',
 # ]
+# Activate Django-Heroku.
+django_heroku.settings(locals())
