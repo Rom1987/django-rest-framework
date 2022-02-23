@@ -295,7 +295,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_HEADERS = (
     'Access-Control-Allow-Headers',
     'Access-Control-Allow-Credentials',
-    # 'Access-Control-Allow-Origin',
+    'Access-Control-Allow-Origin',
 )
 # пишем каким доменам хотим давать доступ к backend
 CORS_ORIGIN_WHITELIST = [
