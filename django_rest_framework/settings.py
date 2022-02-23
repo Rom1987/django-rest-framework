@@ -298,7 +298,7 @@ CORS_ALLOW_HEADERS = (
     'Access-Control-Allow-Origin',
 )
 # пишем каким доменам хотим давать доступ к backend
-CORS_ORIGIN_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
     "http://localhost:5500",
     "http://127.0.0.1:5500",
     "http://localhost:8080",
