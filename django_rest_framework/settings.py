@@ -29,7 +29,7 @@ SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "127.0.0.1",
+    # "127.0.0.1",
     "django--rest--framework.herokuapp.com"
 ]
 
