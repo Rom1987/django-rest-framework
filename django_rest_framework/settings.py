@@ -29,7 +29,10 @@ SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+MIDDLEWARE_CLASSES = (
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+)
 # Application definition
 
 INSTALLED_APPS = [
