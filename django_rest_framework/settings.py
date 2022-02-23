@@ -27,13 +27,13 @@ SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 DEBUG = True
 
 # ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ["http://localhost:5500",
-                 "http://127.0.0.1:5500",
-                 "http://localhost:8080",
-                 "http://127.0.0.1:8000",
-                 "http://localhost:63342",
-                 'http://127.0.0.1:63342',
-                 'https://django--rest--framework.herokuapp.com',
+ALLOWED_HOSTS = ["localhost:5500",
+                 "127.0.0.1:5500",
+                 "localhost:8080",
+                 "127.0.0.1:8000",
+                 "localhost:63342",
+                 '127.0.0.1:63342',
+                 'django--rest--framework.herokuapp.com',
                  'localhost',
                  '127.0.0.1'
                  ]
