@@ -27,17 +27,7 @@ SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ["localhost:5500",
-                 "127.0.0.1:5500",
-                 "localhost:8080",
-                 "127.0.0.1:8000",
-                 "localhost:63342",
-                 '127.0.0.1:63342',
-                 'django--rest--framework.herokuapp.com',
-                 'localhost',
-                 '127.0.0.1'
-                 ]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -319,16 +309,17 @@ CORS_ALLOW_CREDENTIALS = True
 #     'http://localhost:5500',
 #     "http://127.0.0.1:5500",
 # ]
-CORS_ALLOW_HEADERS = [
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-    'Access-Control-Allow-Origin',
-]
+# CORS_ORIGIN_WHITELIST = []
+# CORS_ALLOW_HEADERS = [
+#     'accept',
+#     'accept-encoding',
+#     'authorization',
+#     'content-type',
+#     'dnt',
+#     'origin',
+#     'user-agent',
+#     'x-csrftoken',
+#     'x-requested-with',
+#     'Access-Control-Allow-Origin',
+# ]
 django_heroku.settings(locals())
