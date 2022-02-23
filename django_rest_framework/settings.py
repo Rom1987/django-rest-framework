@@ -57,17 +57,16 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'movies.middleware.corsMiddleware',
 ]
 
 ROOT_URLCONF = 'django_rest_framework.urls'
@@ -292,10 +291,15 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 
 )
+CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ALLOW_HEADERS = (
+#     'Access-Control-Allow-Headers',
+#     'Access-Control-Allow-Credentials',
+# )
 # пишем каким доменам хотим давать доступ к backend
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:5500/index.html",
-    "http://127.0.0.1:5500/index.html",
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
     "http://localhost:8080",
     "http://127.0.0.1:8000",
     "http://localhost:63342",
