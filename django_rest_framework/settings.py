@@ -292,8 +292,8 @@ AUTHENTICATION_BACKENDS = (
 )
 # пишем каким доменам хотим давать доступ к backend
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:5500",
-    "http://127.0.0.1:5500",
+    "http://localhost:5500/index.html",
+    "http://127.0.0.1:5500/index.html",
     "http://localhost:8080",
     "http://127.0.0.1:8000",
     "http://localhost:63342",
