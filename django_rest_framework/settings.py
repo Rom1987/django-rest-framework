@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CORS_ALLOW_HEADERS = "*"
+CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
 # Application definition
 
@@ -300,8 +300,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",
     "http://localhost:8080",
     "http://127.0.0.1:8000",
-    "http://localhost:63342",
-    'http://127.0.0.1:63342',
     'https://django--rest--framework.herokuapp.com',
 ]
 CORS_ALLOW_CREDENTIALS = False
+SESSION_COOKIE_SAMESITE = False
