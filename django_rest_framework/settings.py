@@ -28,7 +28,7 @@ SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["django--rest--framework.herokuapp.com"]
 
 CORS_ALLOW_HEADERS = "access-control-allow-origin"
 
