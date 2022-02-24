@@ -17,6 +17,9 @@ class MovieViewSet(viewsets.ReadOnlyModelViewSet):
     filter_backends = (DjangoFilterBackend,)
     filterset_class = MovieFilter
     pagination_class = PaginationMovies
+    # какие права доступа должны быть у пользователя чтобы просмотреть данный url
+    #     # можно создавать свои permission
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         # Способ №2. Убирает дубли записей

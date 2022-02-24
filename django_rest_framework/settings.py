@@ -29,6 +29,7 @@ SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CORS_ALLOW_HEADERS = ['*']
 
 # Application definition
 
@@ -67,7 +68,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'movies.custom_cors_middleware.CustomCorsMiddleware'
+    # 'movies.custom_cors_middleware.CustomCorsMiddleware'
     # 'movies.middleware.corsMiddleware',
 ]
 
@@ -295,11 +296,11 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # пишем каким доменам хотим давать доступ к backend
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5500",
-    "http://127.0.0.1:5500",
-    "http://localhost:8080",
-    "http://127.0.0.1:8000",
-    'https://django--rest--framework.herokuapp.com',
-]
-# CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5500",
+#     "http://127.0.0.1:5500",
+#     "http://localhost:8080",
+#     "http://127.0.0.1:8000",
+#     'https://django--rest--framework.herokuapp.com',
+# ]
+CORS_ORIGIN_ALLOW_ALL = True
