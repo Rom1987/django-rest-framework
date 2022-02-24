@@ -8,7 +8,7 @@ class CustomCorsMiddleware:
         # the view (and later middleware) are called.
 
         response = self.get_response(request)
-        # response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Origin"] = "http://localhost:5500"
         response["Access-Control-Allow-Headers"] = "*"
 
         # Code to be executed for each request/response after
