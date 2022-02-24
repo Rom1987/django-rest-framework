@@ -304,3 +304,4 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:63342',
     'https://django--rest--framework.herokuapp.com',
 ]
+CORS_ALLOW_CREDENTIALS = False
