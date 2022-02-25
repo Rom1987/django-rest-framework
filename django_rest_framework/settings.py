@@ -294,7 +294,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 
 )
-
+APPEND_SLASH = False
 # пишем каким доменам хотим давать доступ к backend
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5500",
