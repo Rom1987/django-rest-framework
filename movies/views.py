@@ -19,7 +19,7 @@ class MovieViewSet(viewsets.ReadOnlyModelViewSet):
     pagination_class = PaginationMovies
     # какие права доступа должны быть у пользователя чтобы просмотреть данный url
     #     # можно создавать свои permission
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAdminUser]
 
     def get_queryset(self):
         # Способ №2. Убирает дубли записей
