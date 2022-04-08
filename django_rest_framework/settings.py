@@ -13,8 +13,7 @@ import os
 from datetime import timedelta
 from pathlib import Path
 import dj_database_url
-
-# import django_heroku
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '41ki!s3up2pq68rd4c18d-5&hkn+bh+z#bb-ytpj!+e+$jffiu'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', False)
 
 ALLOWED_HOSTS = ["*"]
 CORS_ALLOW_HEADERS = ['*']
@@ -238,8 +237,8 @@ REST_FRAMEWORK = {
 # smtp
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'goodgooding973@gmail.com'  # email user
-EMAIL_HOST_PASSWORD = '123g456o789od'  # email password
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')  # email user
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')  # email password
 EMAIL_PORT = 587
 
 DJOSER = {
@@ -281,10 +280,8 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-SOCIAL_AUTH_VK_OAUTH2_KEY = '7935343'  # id приложения
-SOCIAL_AUTH_VK_OAUTH2_SECRET = 'p1G9kBNircmsxW3cxpQB'  # секретный ключ
-SOCIAL_AUTH_VK_OAUTH2_KEY = '7936420'  # id приложения
-SOCIAL_AUTH_VK_OAUTH2_SECRET = 'gLbky4nXsNN3iiTsWf27'  # секретный ключ
+SOCIAL_AUTH_VK_OAUTH2_KEY = config('SOCIAL_AUTH_VK_OAUTH2_KEY')  # id приложения
+SOCIAL_AUTH_VK_OAUTH2_SECRET = config('SOCIAL_AUTH_VK_OAUTH2_SECRET')  # секретный ключ
 
 AUTHENTICATION_BACKENDS = (
     # VK OAuth2
