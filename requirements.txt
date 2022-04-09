@@ -51,3 +51,4 @@ uritemplate==4.1.1
 urllib3==1.26.8
 whitenoise==6.0.0
 wrapt==1.13.3
+python-decouple==3.6
